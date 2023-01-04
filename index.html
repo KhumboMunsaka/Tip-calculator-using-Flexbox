@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+  
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="splitter">
+<div><p>SPLI</p></div>
+<div><p>TTER</p></div>
+    </div>
+    <div class="container">
+      <div class="background">
+        <div class="bill-info">
+          <div class="bill">
+            <p class="billInfo-words">Bill</p>
+            <input type="" name="" type="number" id="" placeholder="0"  onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))" class="billInput" />
+          </div>
+          <div class="tip-selection">
+            <p class="billInfo-words">Select Tip %</p>
+            <div class="buttons">
+              <div><button class="five">5%</button></div>
+              <div><button class="ten">10%</button></div>
+              <div><button class="fifteen">15%</button></div>
+              <div><button class="twentyFive">25%</button></div>
+              <div><button class="fifty">50%</button></div>
+
+              <div class="custom">
+                <input type="" name="" id="" placeholder="Custom" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))" class="customInput"/>
+              </div>
+            </div>
+            <div class="people">
+              <div class="infoOnPeople" >
+                <p class="billInfo-words">Number of people</p>
+
+                <p class="error" >Can't be zero</p>
+              </div>
+
+              <input type="" name="" type="number" id="" placeholder="0" onkeypress="return (event.charCode !=8 && event.charCode ==0 || ( event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)))" class="peoplePresent"/>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-info">
+          <div class="tip-amount">
+            <div class="tip-words">
+              <p>Tip Amount</p>
+              <p>/ person</p>
+            </div>
+            <p class="cost">$0.00</p>
+          </div>
+
+          <div class="No-people">
+            <div class="tip-words">
+              <p>Total</p>
+              <p>/ person</p>
+            </div>
+            <p class="costOfPeople"> <span>$0.00</span> </p>
+          </div>
+          <div class="reset">
+            <button class="resetButton">RESET</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">KhumboMunsaka</a>.
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

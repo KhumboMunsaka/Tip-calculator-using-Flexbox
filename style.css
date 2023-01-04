@@ -1,0 +1,235 @@
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Space+Mono&display=swap'); 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 700;
+font-family: 'Space Mono', monospace;
+}
+
+input {
+  font-size: 24px;
+}
+
+body {
+  background-color: hsl(185, 41%, 84%);
+}
+/* to place it in the middle */
+body .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+/* to put the splitter words */
+.splitter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 80px;
+}
+.splitter p {
+  font-weight: 900;
+  font-size: 20px;
+  letter-spacing: 0.4em;
+  color: hsl(185, 61%, 30%);
+}
+/* to style the white background */
+.container .background {
+  display: flex;
+  height: 400px;
+  width: 700px;
+  border-radius: 15px;
+  padding: 20px;
+  background-color: white;
+}
+/* to style the bill info */
+.bill-info {
+  padding: 20px;
+  width: 590px;
+}
+
+/* to style the tip info */
+.tip-info {
+  padding: 20px;
+  /* max-width: 350px; */
+  width: 100%;
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+  border-radius: 10px;
+}
+
+/* to style the buttons for tipping  */
+
+.tip-selection {
+  margin-top: 25px;
+  height: 100%;
+  width: 100%;
+}
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  border: none;
+}
+/* to style how the buttons look */
+
+.buttons button {
+  background-color: hsl(183, 100%, 15%);
+  color: white;
+}
+.buttons button,
+.custom input {
+  background-color: hsl(183, 100%, 15%);
+  height: 35px;
+  width: 80px;
+  margin: 5px;
+  border: none;
+  border-radius: 3px;
+  font-size: large;
+}
+
+.buttons button:hover , .reset button:hover {
+   background-color:  hsl(185, 74%, 76%);
+   color: hsl(183, 100%, 15%);
+     transition: 300ms ease-in-out;
+}
+/* to edit the custom button */
+.buttons .custom input {
+  background-color: hsl(189, 41%, 97%);
+  padding: 5px;
+  color: hsl(184, 14%, 56%);
+  text-align: right;
+}
+/* to place the number of people  */
+.people {
+  margin-top: 20px;
+}
+
+/* to put the icon on the people input field */
+.people input {
+  background: url(images/icon-person.svg);
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-align: right;
+}
+.bill input {
+  background: url(images/icon-dollar.svg);
+  background-repeat: no-repeat;
+  background-position: 1% 50%;
+  text-align: right;
+}
+
+::placeholder {
+  color: hsl(184, 14%, 56%);
+}
+
+.people input,
+.bill input {
+  border: none;
+  border-radius: 3px;
+  width: 275px;
+  height: 40px;
+  padding: 10px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  font-weight: 700;
+}
+/* to change color of border when input is focused */
+.bill input:focus,
+.people input:focus,
+.custom input:focus {
+  outline-color: hsl(172, 67%, 45%);
+}
+/* to display number of people and error message */
+.infoOnPeople{
+display: flex;
+justify-content: space-around ;
+}
+.billInfo-words:first-child {
+margin-right: auto;
+}
+
+
+
+/* to make sure the error message is styled nicely */
+.error{
+  color: rgb(235, 54, 54);
+  font-size: 9px;
+ opacity: 0;
+}
+
+/* to style the tip information */
+.tip-amount,
+.No-people {
+  display: flex;
+  justify-content: space-between;
+}
+/* to display cost */
+.cost, .costOfPeople {
+  color: hsl(172, 67%, 45%);
+  font-size: 48px;
+}
+
+/* to style the reset button */
+.tip-info button {
+  border: none;
+  border-radius: 3px;
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+/* to place the reset button */
+.tip-info .reset {
+  margin-top: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/* to style the tip words */
+.tip-words {
+  font-size: smaller;
+}
+/* to make the words "/person" smaller */
+.tip-words p:nth-of-type(2) {
+  font-size: 10px;
+  color: hsl(184, 14%, 56%);
+}
+/* to style the bill information words */
+.billInfo-words {
+  font-size: 14px;
+  color: hsl(184, 14%, 56%);
+}
+
+
+/* to make it responsive */
+@media (max-width: 375px) {
+  .container .background {
+  display: flex;
+ flex-direction: column;
+ max-width: 375px;
+ /* height: 725px; */
+ height: 100%;
+ width: 100%;
+ border-bottom-right-radius: 0;
+ border-bottom-left-radius: 0;
+
+}
+.buttons {
+   display: flex;
+   max-width: 275px;
+  flex-wrap: wrap;
+  border: none;
+}
+.attribution{
+  background-color: white;
+}
+.tip-info {
+  height: 400px;
+}
+}
