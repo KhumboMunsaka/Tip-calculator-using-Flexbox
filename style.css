@@ -82,6 +82,12 @@ body .container {
   background-color: hsl(183, 100%, 15%);
   color: white;
 }
+.custom {
+  width: 6em;
+}
+.custom input::placeholder {
+  text-align: left;
+}
 .buttons button,
 .custom input {
   background-color: hsl(183, 100%, 15%);
@@ -104,7 +110,7 @@ body .container {
   background-color: hsl(189, 41%, 97%);
   padding: 5px;
   color: hsl(184, 14%, 56%);
-  text-align: right;
+  text-align: left;
 }
 /* to place the number of people  */
 .people {
@@ -212,13 +218,11 @@ body .container {
   .container .background {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     width: 80%;
-    margin: 3em auto;
+    margin: 0 auto;
     max-width: 375px;
     height: 100%;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
   }
   .attribution {
     width: 80%;
