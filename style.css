@@ -213,15 +213,16 @@ body .container {
     display: flex;
     flex-direction: column;
 
+    width: 80%;
+    margin: 3em auto;
     max-width: 375px;
     height: 100%;
-    width: 100%;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .container {
+  .attribution {
     width: 80%;
-    margin: 0 auto;
+    margin-bottom: 2em;
   }
 
   .tip-info {
