@@ -1,11 +1,11 @@
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Space+Mono&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&family=Space+Mono&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-weight: 700;
-font-family: 'Space Mono', monospace;
+  font-family: 'Space Mono', monospace;
 }
 
 input {
@@ -14,6 +14,9 @@ input {
 
 body {
   background-color: hsl(185, 41%, 84%);
+  display: grid;
+  align-items: center;
+  justify-items: center;
 }
 /* to place it in the middle */
 body .container {
@@ -39,8 +42,7 @@ body .container {
 /* to style the white background */
 .container .background {
   display: flex;
-  height: 400px;
-  width: 700px;
+  max-width: 700px;
   border-radius: 15px;
   padding: 20px;
   background-color: white;
@@ -48,16 +50,17 @@ body .container {
 /* to style the bill info */
 .bill-info {
   padding: 20px;
-  width: 590px;
+  width: 100%;
 }
 
 /* to style the tip info */
 .tip-info {
   padding: 20px;
-  /* max-width: 350px; */
   width: 100%;
   background-color: hsl(183, 100%, 15%);
   color: white;
+  position: relative;
+  max-height: 100%;
   border-radius: 10px;
 }
 
@@ -65,13 +68,13 @@ body .container {
 
 .tip-selection {
   margin-top: 25px;
-  height: 100%;
-  width: 100%;
 }
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* gap: 1em; */
   border: none;
+  width: 100%;
 }
 /* to style how the buttons look */
 
@@ -83,17 +86,18 @@ body .container {
 .custom input {
   background-color: hsl(183, 100%, 15%);
   height: 35px;
-  width: 80px;
+  width: 90%;
   margin: 5px;
   border: none;
   border-radius: 3px;
   font-size: large;
 }
 
-.buttons button:hover , .reset button:hover {
-   background-color:  hsl(185, 74%, 76%);
-   color: hsl(183, 100%, 15%);
-     transition: 300ms ease-in-out;
+.buttons button:hover,
+.reset button:hover {
+  background-color: hsl(185, 74%, 76%);
+  color: hsl(183, 100%, 15%);
+  transition: 300ms ease-in-out;
 }
 /* to edit the custom button */
 .buttons .custom input {
@@ -129,8 +133,7 @@ body .container {
 .bill input {
   border: none;
   border-radius: 3px;
-  width: 275px;
-  height: 40px;
+  width: 100%;
   padding: 10px;
   background-color: hsl(189, 41%, 97%);
   color: hsl(183, 100%, 15%);
@@ -143,21 +146,19 @@ body .container {
   outline-color: hsl(172, 67%, 45%);
 }
 /* to display number of people and error message */
-.infoOnPeople{
-display: flex;
-justify-content: space-around ;
+.infoOnPeople {
+  display: flex;
+  justify-content: space-around;
 }
 .billInfo-words:first-child {
-margin-right: auto;
+  margin-right: auto;
 }
 
-
-
 /* to make sure the error message is styled nicely */
-.error{
+.error {
   color: rgb(235, 54, 54);
   font-size: 9px;
- opacity: 0;
+  opacity: 0;
 }
 
 /* to style the tip information */
@@ -167,7 +168,8 @@ margin-right: auto;
   justify-content: space-between;
 }
 /* to display cost */
-.cost, .costOfPeople {
+.cost,
+.costOfPeople {
   color: hsl(172, 67%, 45%);
   font-size: 48px;
 }
@@ -176,8 +178,7 @@ margin-right: auto;
 .tip-info button {
   border: none;
   border-radius: 3px;
-  width: 300px;
-  height: 40px;
+  width: 100%;
   padding: 10px;
   background-color: hsl(172, 67%, 45%);
   color: hsl(183, 100%, 15%);
@@ -206,30 +207,26 @@ margin-right: auto;
   color: hsl(184, 14%, 56%);
 }
 
-
 /* to make it responsive */
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   .container .background {
-  display: flex;
- flex-direction: column;
- max-width: 375px;
- /* height: 725px; */
- height: 100%;
- width: 100%;
- border-bottom-right-radius: 0;
- border-bottom-left-radius: 0;
+    display: flex;
+    flex-direction: column;
 
-}
-.buttons {
-   display: flex;
-   max-width: 275px;
-  flex-wrap: wrap;
-  border: none;
-}
-.attribution{
-  background-color: white;
-}
-.tip-info {
-  height: 400px;
-}
+    max-width: 375px;
+    height: 100%;
+    width: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .tip-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 }
